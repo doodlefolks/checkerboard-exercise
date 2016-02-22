@@ -1,7 +1,15 @@
 // Your JS goes here
+var musicTag = document.createElement('embed');
+musicTag.src = 'bg-music.mp3';
+musicTag.autostart = 'true';
+musicTag.loop = 'true';
+musicTag.width = 0;
+musicTag.height = 0;
+var body = document.getElementsByTagName('body')[0];
+body.appendChild(musicTag);
 var flash = function() {
   var body = document.getElementsByTagName('body')[0];
-  for (var i = 0; i < body.children.length; i++) {
+  for (var i = 2; i < body.children.length; i++) {
     if (body.children[i].tagName = 'DIV') {
       body.removeChild(body.children[i]);
       i--;
