@@ -6,11 +6,10 @@ for (var i = 1; i <= 9; i++) {
     newSquare.style.width = '11.1%';
     newSquare.style.paddingBottom = '11.1%';
     newSquare.style.cssFloat = 'left';
-    if ((i % 2 == 1 && j % 2 == 1) || (i % 2 == 0 && j % 2 == 0)) {
-      newSquare.style.background = 'black';
-    } else {
-      newSquare.style.background = 'red';
-    }
+    var red = Math.round(Math.random() * 255);
+    var blue = Math.round(Math.random() * 255);
+    var green = Math.round(Math.random() * 255);
+    newSquare.style.background = `rgb(${red}, ${green}, ${blue})`;
     body.appendChild(newSquare);
   }
 }
