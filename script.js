@@ -1,12 +1,7 @@
 // Your JS goes here
 var flash = function() {
   var body = document.getElementsByTagName('body')[0];
-  for (var i = 0; i < body.children.length; i++) {
-    if (body.children[i].tagName = 'DIV') {
-      body.removeChild(body.children[i]);
-      i--;
-    }
-  }
+  body.innerHTML = '';
   for (var i = 1; i <= 9; i++) {
     for (var j = 1; j <= 9; j++) {
       var newSquare = document.createElement('div');
